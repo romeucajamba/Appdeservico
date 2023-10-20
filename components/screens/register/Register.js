@@ -1,6 +1,7 @@
 import { View, Image, TextInput, Text, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import styles from './styles';
 import logo from '../../img/AngV.png'
@@ -24,7 +25,7 @@ export default function Cadastro({ navigation }) {
 
     function verification() {
         if (email == null || password == null || confirmPass == password) {
-            setMessageError("Preencha os campos obrigatórios, senha não pode ser diferente")
+            setMessageError("Preencha os campos obrigatórios! Senhas não podem ser diferentes.")
             return
         } else {
             loginScreen()
@@ -42,17 +43,31 @@ export default function Cadastro({ navigation }) {
                 style={styles.image}
             />
             <Text style={styles.errorMessage}>{messageError}</Text>
-            <TextInput style={styles.input1} placeholder="Digite seu email" keyboardType="email-address" value={email} onChangeText={setEmail} />
-            <TextInput style={styles.input2} placeholder="Digita sua senha" keyboardType="visible-password" value={password} onChangeText={setPassword} />
-            <TextInput style={styles.input3} placeholder="Confirme a sua senha" keyboardType="visible-password" value={confirmPass} onChangeText={setConfirmPass} />
-            <TouchableOpacity style={styles.textPress1} onPress={verification}><Text style={styles.text1}>Cadastrar-se</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.textsPress2}>
-                <Feather name="mail" size={22} color="#fff" />
-                <Text style={styles.text2}>Cadastrar-se com o google</Text>
-            </TouchableOpacity>
-            <Text style={styles.text3}>__________________________________</Text>
-            <Text style={styles.text4}>Já tem uma conta?</Text>
-            <TouchableOpacity style={styles.textPress4} onPress={loginScreen}><Text style={styles.text5}>Acessar conta</Text></TouchableOpacity>
+            <View style={styles.inputsIcon}>
+                <TextInput style={styles.input} placeholder="Digite seu email ou telemóvel" keyboardType="email-address" value={email} onChangeText={setEmail} />
+                <Ionicons name="person" size={20} style={styles.icon} />
+            </View>
+            <View style={styles.inputsIcon}>
+                <TextInput style={styles.input} placeholder="Digita sua senha" keyboardType="visible-password" value={password} onChangeText={setPassword} />
+                <Ionicons name="lock-closed" size={20} style={styles.icon} />
+            </View>
+            <View style={styles.inputsIcon}>
+                <TextInput style={styles.input} placeholder="Confirmar a senha" keyboardType="visible-password" value={password} onChangeText={setConfirmPass} />
+                <Ionicons name="lock-closed" size={20} style={styles.icon} />
+            </View>
+            <TouchableOpacity style={styles.logontPress} onPress={verification}><Text style={styles.textButton}>Cadastrar-se</Text></TouchableOpacity>
+            <Text style={styles.textEmail}>Cadastrar-se com</Text>
+            <View style={styles.buttonsAuth}>
+                <TouchableOpacity>
+                    <Ionicons name="ios-logo-google" size={22} color="red" style={styles.ioIcon} />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Feather name="facebook" size={22} color="#12B3BD" style={styles.feath} />
+                </TouchableOpacity>
+            </View>
+            <Text style={styles.line}>__________________________________</Text>
+            <Text style={styles.ccount}>Já tem uma conta?</Text>
+            <TouchableOpacity style={styles.loginButton} onPress={loginScreen}><Text style={styles.textLoginBtn}>Acessar conta</Text></TouchableOpacity>
         </View>
     )
 }

@@ -9,101 +9,110 @@ const styles = StyleSheet.create({
         paddingTop: 80
     },
     image: {
-        width: 170,
+        width: 245,
         height: 110,
-    },
-    input1: {
-        marginTop: 50,
-        width: 334,
-        height: 40,
-        color: '#fff',
-        borderWidth: 2,
-        borderColor: '#fff',
-        paddingLeft: 10,
-        borderRadius: 30,
     },
     errorMessage: {
         color: 'red',
         marginTop: 40,
-        marginRight: 100,
+        marginRight: 70,
     },
-    input2: {
-        marginTop: 40,
+    inputsIcon: {
+        flexDirection: 'row',
+    },
+    input: {
+        marginTop: 30,
         width: 334,
         height: 40,
-        color: '#fff',
+        color: '#0E0C16',
         borderWidth: 2,
-        borderColor: '#fff',
+        borderColor: '#0E0C16',
         paddingLeft: 10,
-        borderRadius: 30,
+        borderRadius: 10,
+        backgroundColor: '#f4f4f4',
     },
-    press0: {
-        marginTop: 10,
-        marginLeft: 90,
-    },
-    textPress1: {
-        backgroundColor: '#12B3BD',
-        color: '#fff',
-        width: 240,
-        height: 40,
-        borderRadius: 50,
-        textAlign: 'center',
-        padding: 10,
+    icon: {
+        position: 'absolute',
+        color: '#12B3BD',
+        marginLeft: 295,
         marginTop: 40,
-        alignItems: 'center',
-        justifyContent: 'center',
+        fontWeight: 'bold',
     },
-    textsPress2: {
-        flexDirection: 'row',
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 5,
-    },
-    textsPress3: {
-        color: '#fff',
-
-    },
-    textPress4: {
-        backgroundColor: '#12B3BD',
-        color: '#fff',
-        width: 240,
-        height: 40,
-        borderRadius: 50,
-        textAlign: 'center',
-        padding: 10,
-        marginTop: 30,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text0: {
+    fogotPass: {
         color: '#12B3BD',
         fontSize: 15,
+        marginTop: 10,
+        marginLeft: 165,
     },
-    text1: {
+    forgotText: {
+        color: '#12B3BD',
+    },
+    ButtontPress: {
+        backgroundColor: '#12B3BD',
+        color: '#fff',
+        width: 240,
+        height: 40,
+        borderRadius: 12,
+        textAlign: 'center',
+        padding: 10,
+        marginTop: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    textButton: {
         color: '#fff',
         fontSize: 15,
         fontWeight: "bold",
     },
-    text2: {
+    textEmail: {
         color: '#fff',
         fontSize: 15,
         marginLeft: 5,
+        marginTop: 15,
     },
-    text3: {
+    buttonsAuth: {
+        flexDirection: 'row',
+        marginTop: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    ioIcon: {
+        backgroundColor: '#0E0C16',
+        borderWidth: 1,
+        borderColor: 'red',
+        borderRadius: 50,
+        padding: 8,
+    },
+    feath: {
+        backgroundColor: '#0E0C16',
+        borderWidth: 1,
+        borderColor: '#12B3BD',
+        borderRadius: 20,
+        padding: 8,
+        marginLeft: 8,
+    },
+    line: {
         color: '#fff',
         fontSize: 20,
     },
-    text4: {
+    createCount: {
         color: '#fff',
-        fontSize: 10,
+        fontSize: 12,
         marginTop: 10,
     },
-    text5: {
+    signUpButton: {
+        backgroundColor: '#12B3BD',
         color: '#fff',
-        fontSize: 15,
-        fontWeight: "bold",
+        width: 240,
+        height: 40,
+        borderRadius: 12,
+        textAlign: 'center',
+        padding: 10,
+        marginTop: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
+
 });
 
 export default styles;

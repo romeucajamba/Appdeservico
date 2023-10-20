@@ -15,33 +15,28 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     searchBar: {
         flexDirection: 'row',
-        paddingHorizontal: 15,
         alignItems: 'center',
-        marginVertical: 2,
         width: '100%',
-        height: 37,
-        marginTop: 20,
+        height: 40,
+        marginTop: 1,
         backgroundColor: '#0E0C16',
-        elevation: 2,
+
     },
     search: {
-        marginTop: 1,
-        marginLeft: 25,
+        color: '#12B3BD',
         position: 'absolute',
-        color: '#000',
-
+        marginLeft: 40,
     },
     searchInput: {
         backgroundColor: '#D9D9D9',
-        width: 300,
         height: 30,
-        marginLeft: 20,
-        paddingHorizontal: 10,
         textAlign: 'center',
-        borderRadius: 40,
-        width: '90%',
+        borderRadius: 15,
+        width: '80%',
+        marginLeft: 30,
     },
 });
 
